@@ -1,0 +1,113 @@
+$bgcolor: #212529;
+$textcolor: white;
+.mycontainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vw;
+}
+.navbar {
+    background-color: $bgcolor !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 3px 0 grey;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  
+    .navbar-brand {
+      img {
+        height: 10vh;
+      }
+    }
+  
+    .nav-text {
+      color: $textcolor !important;
+    }
+  
+    .underline:hover {
+      border-bottom: 2px solid $textcolor;
+    }
+  
+    .dropdown-menu {
+      background-color: $bgcolor !important;
+    }
+  
+    .sortby {
+      color: $textcolor;
+    }
+  
+    .filterby {
+      color: $textcolor;
+    }
+  
+    .dropdown-item {
+      color: $textcolor;
+      background-color: $bgcolor;
+    }
+  
+    svg {
+      fill: $textcolor;
+      height: 1.5em; 
+      width: 1.5em; 
+    }
+}
+
+.card-design{
+    width: 20vw;
+    background-color: $bgcolor!important;
+    color: $textcolor!important;
+    margin-left: 12vw!important;
+    margin-top: 5vw !important;
+    // margin-bottom: 5vw !important;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    button {
+        margin-left: 10px;
+        background-color: #212529;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #343a40;
+        }
+    }
+}
+.form-group{
+    display: flex;
+   
+    input{
+        width: 40vw;
+    }
+    button{
+        margin-left: 2vw;
+        // height: 3vw;
+      
+    }
+    svg{
+        fill: $textcolor;
+    }
+}
+
+.back-video{
+    position:absolute;
+    right: 0;
+    bottom:0;
+    z-index: -1;
+}
+app-footer{
+    margin-top: 5.5vw;
+    width: 100%;
+}

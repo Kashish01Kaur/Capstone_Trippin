@@ -1,0 +1,69 @@
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="'/userdashboard'">
+      <img src="assets/Trippin.png" alt="Trippin logo">
+    </a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+      <ul class="navbar-nav">
+        <li class="nav-item m-2">
+          <a class="nav-link underline nav-text" [routerLink]="'/itinerary'"><svg xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z" />
+            </svg></a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link underline nav-text" [routerLink]="'/weather'"><svg xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
+            </svg></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="mycontainer">
+  <div class="hero">
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="assets/pexels-brett-sayles-5930874 (1080p).mp4" type="video/mp4">
+    </video>
+
+    <form class="form-inline mb-3 justify-content-center">
+      <div class="form-group">
+        <div>
+          <input type="text" class="form-control mx-2" id="city" [(ngModel)]="city" name="city"
+            placeholder="Enter a City">
+        </div>
+        <div class="button-container">
+          <button type="button" class="btn btn-primary" (click)="getWeather(city)"><svg
+              xmlns="http://www.w3.org/2000/svg" height="1em"
+              viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
+            </svg></button>
+        </div>
+      </div>
+    </form>
+    <div class="card text-white bg-primary m-5  card-design" *ngIf="myWeather">
+      <div class="card-header text-center">
+        <h2>{{city}}</h2>
+        <p><img src="{{iconURL}}" alt="weather image"></p>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Summary: {{summary}}</p>
+        <p class="card-text">Temperature: {{temperature}} °C</p>
+        <p class="card-text">Feels like: {{feelsLikeTemp}} °C</p>
+        <p class="card-text">Pressure: {{pressure}} hPa</p>
+        <p class="card-text">Humidity: {{humidity}} %</p>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

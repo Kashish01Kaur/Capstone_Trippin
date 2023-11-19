@@ -1,0 +1,105 @@
+<app-navbar></app-navbar>
+
+<div class="carousel-container">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <img
+        src="https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHJhdmVsJTIwcGxhbm5pbmd8ZW58MHx8MHx8fDA%3D"
+        alt="Random slide">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img
+        src="https://image.cnbcfm.com/api/v1/image/107185268-1674841615778-gettyimages-1457910259-a7404995.jpeg?v=1684929601"
+        alt="Random slide">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="https://rs.projects-abroad.com.au/v1/products/travel-the-world-resize-product-61dc5a672d409.[1090].png"
+        alt="Random slide">
+    </ng-template>
+  </ngb-carousel>
+
+  <div class="login-container">
+    <button class="gradient-button" [routerLink]="'/adminlogin'" routerLinkActive="active">Admin</button>
+    <button class="gradient-button" [routerLink]="'/userlogin'" routerLinkActive="active">User</button>
+  </div>
+</div>
+
+<section class="feature-section">
+  <div class="feature-image">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/a9/d6/bc/lily-pool-villa.jpg" alt="Feature image">
+  </div>
+  <div class="feature-container">
+    <h2 class="feature-heading">Book Your Dream Getaway with Ease</h2>
+    <p class="feature-paragraph">Gone are the days of endlessly searching for the best deals on accommodations and
+      activities. With our streamlined platform, booking your dream getaway has never been easier. Whether you're
+      searching for a luxurious hotel or an adventurous excursion, we've got you covered.</p>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="feature-image">
+    <img
+      src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/327298805/original/6b7c093cb222c7d677a3691c113debb9d08db268/plan-your-unique-travel-itinerary-plan-to-any-country.png"
+      alt="Feature image">
+  </div>
+  <div class="feature-container">
+    <h2 class="feature-heading">Craft Your Perfect Trip Itinerary</h2>
+    <p class="feature-paragraph">No two travelers are the same - why should their itineraries be? Our platform allows
+      you to create a personalized travel itinerary tailored to your unique interests and preferences. From local
+      cuisine to outdoor activities, the possibilities are endless.</p>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="feature-image">
+    <img src="https://i.pinimg.com/736x/11/f6/99/11f699a637a3950addb9920b08722f52.jpg" alt="Feature image">
+  </div>
+  <div class="feature-container">
+    <h2 class="feature-heading">Get a Bird's Eye View with Interactive Maps</h2>
+    <p class="feature-paragraph"> Explore your travel destinations like never before with our interactive maps. Get a
+      bird's eye view of your surroundings and plan routes with ease. Plus, our maps help you discover hidden gems and
+      local hotspots.</p>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="feature-image">
+    <img src="https://www.onetravel.com/going-places/wp-content/uploads/2019/04/Travel-Weather-weather-app.jpg"
+      alt="Feature image">
+  </div>
+  <div class="feature-container">
+    <h2 class="feature-heading">
+      Stay One Step Ahead with Accurate Weather Forecasts</h2>
+    <p class="feature-paragraph">Don't let unexpected weather put a damper on your travel plans. Stay up-to-date on the
+      latest weather forecasts for your destination, ensuring you're prepared for whatever weather comes your way. Our
+      weather tools provide accurate updates, so you can rest easy knowing your trip won't be impacted by unforeseen
+      circumstances.</p>
+  </div>
+</section>
+
+  <div class="contact-form">
+    <div class="form-header">
+      <h3>Contact Us</h3>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="email" class="form-control" id="email-input" name="email" placeholder="Your Email" required
+          [(ngModel)]="email">
+        <label for="email-input"></label>
+        <div class="input-icon">
+          <i class="far fa-envelope"></i>
+        </div>
+        <small *ngIf="email!.length > 0 && !(email.includes('@') && email.includes('.'))"
+          class="form-text text-danger">Please enter a valid email.</small>
+      </div>
+      <button type="submit" class="gradient-button modify-btn"
+        [disabled]="!email || email!.length === 0 || !(email.includes('@') && email.includes('.'))">Submit</button>
+    </form>
+  
+    <div class="form-footer">
+      <p>We'll never share your email with anyone else.</p>
+    </div>
+  </div>
+
+
+<app-footer></app-footer>

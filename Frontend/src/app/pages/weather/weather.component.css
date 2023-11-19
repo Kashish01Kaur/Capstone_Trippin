@@ -1,0 +1,99 @@
+.mycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8vw;
+}
+
+.navbar {
+  background-color: #212529 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 3px 0 grey;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.navbar .navbar-brand img {
+  height: 10vh;
+}
+.navbar .nav-text {
+  color: white !important;
+}
+.navbar .underline:hover {
+  border-bottom: 2px solid white;
+}
+.navbar .dropdown-menu {
+  background-color: #212529 !important;
+}
+.navbar .sortby {
+  color: white;
+}
+.navbar .filterby {
+  color: white;
+}
+.navbar .dropdown-item {
+  color: white;
+  background-color: #212529;
+}
+.navbar svg {
+  fill: white;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.card-design {
+  width: 20vw;
+  background-color: #212529 !important;
+  color: white !important;
+  margin-left: 12vw !important;
+  margin-top: 5vw !important;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button-container button {
+  margin-left: 10px;
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #343a40;
+}
+
+.form-group {
+  display: flex;
+}
+.form-group input {
+  width: 40vw;
+}
+.form-group button {
+  margin-left: 2vw;
+}
+.form-group svg {
+  fill: white;
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+app-footer {
+  margin-top: 5.5vw;
+  width: 100%;
+}/*# sourceMappingURL=weather.component.css.map */

@@ -1,0 +1,18 @@
+<body>
+<div class="container"> 
+  <div class="form-container">
+    <h1>Admin Login</h1>
+    <form [formGroup]="signInForm" (submit)="AdminSignIn()">
+      <label for="email-input">Email</label>
+      <input formControlName="email" id="email-input" type="email" name="email" required>
+      <br>
+      <label for="password-input">Password</label>
+      <input formControlName="password" id="password-input" type="password" name="password" required>
+      <br>
+      <div class="btn-container">
+        <button type="submit" class="gradient-button">Sign In</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  </body>

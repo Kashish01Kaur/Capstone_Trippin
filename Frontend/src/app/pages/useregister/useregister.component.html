@@ -1,0 +1,43 @@
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2 class="text-center mb-4">New to Trippin? Sign Up Here</h2>
+      <form [formGroup]="userData" (submit)="Register()">
+        <label for="firstName-input">Firstname</label>
+        <input formControlName="firstName" id="firstName-input" type="text" name="firstName" required>
+        <br>
+        <label for="lastName-input">Lastname</label>
+        <input formControlName="lastName" id="lastName-input" type="text" name="lastName" required>
+        <br>
+        <label for="email-input">Email</label>
+      <input formControlName="email" id="email-input" type="email" name="email" required>
+      <br>
+      <label for="password-input">Password</label>
+      <input formControlName="password" id="password-input" type="password" name="password" required>
+      <br>
+          <label>Role:</label>
+          <div>
+            <input type="radio" formControlName="role" value="user"> User
+          </div>
+          <br>
+          <label for="contactNo-input">Contact No.</label>
+          <input type="tel" id="contactNo-input" formControlName="contactNo">
+          <br>
+          <label for="travelExperienceLevel-input">Travel Experience Level</label>
+          <input type="text" id="travelExperienceLevel-input" formControlName="travelExperienceLevel">
+          <br>
+          <label for="travelBudget-input">Travel Budget</label>
+          <input type="number" id="travelBudget-input" formControlName="travelBudget" >
+        <br>
+        <div class="btn-container">
+          <button type="submit" [disabled]="!userData.valid" class="btn btn-primary btn-block">Sign Up</button>
+        </div>
+        <div class="register-link">
+          <p class="text-center">Already a User? <a href="/userlogin">Sign In</a></p>
+        </div>
+ 
+    </form>
+  </div>
+  </div>
+
+</body>

@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="'/userdashboard'">
+      <img src="assets/Trippin.png" alt="Trippin logo">
+    </a>
+    <div class="search-container">
+      <label>Search activities :</label>
+      <input type="text" [(ngModel)]="searchText" placeholder="Enter activity" class="">
+      <button class="search-btn" (click)="search()"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+<path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+    </div>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+      <ul class="navbar-nav">
+        <li class="nav-item m-2">
+          <a class="nav-link underline nav-text" [routerLink]="'/itinerary'"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+<path d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"/></svg></a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link underline nav-text" [routerLink]="'/weather'"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+<path d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg></a>
+        </li>  
+      </ul>
+    </div>
+  </div>
+</nav> 
+<div class="carousel-container">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <img
+        src="https://trotterit.com/wp-content/uploads/2021/03/best-adventure-places-in-India.jpg"
+        alt="Random slide">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img
+        src="https://www.cleartrip.com/collections/wp-content/uploads/2018/12/parasailing-kolkata.jpg"
+        alt="Random slide">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="https://static.toiimg.com/thumb/msid-92089121,width-748,height-499,resizemode=4,imgsize-139308/.jpg"
+        alt="Random slide">
+    </ng-template>
+  </ngb-carousel>
+<!-- </div>
+  <div class="container d-flex justify-content-start align-items-center mt-5 mb-5 " *ngFor = "let item of myActivities">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ item.activityImage}}" alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">{{item.activityName}}</h5>
+          <p class="card-text">{{item.activityDescription}}</p>
+          <button type="button" class="btn btn-primary" (click)="addActivityToItinerary(item)">Add to itinerary</button>
+      </div>
+  </div>
+  </div> -->
+  <div class="accomodation-container">
+    <div class="flex-container">
+      <div *ngIf="(searchText.trim() === '' ) || searchedResults.length > 0;else noResults">
+        <div *ngFor="let pkg of searchedResults.length > 0 ? searchedResults : myActivities" class="flex-container">
+          <div class="image-container">
+            <img src="{{ pkg.activityImage }}" alt="Destination image">
+          </div>
+          <div class="info-container">
+            <h2 class="card-title">{{pkg.activityName}}</h2>
+            <div class="destination-info">
+              <p class="card-text">{{pkg.activityDescription}}</p>
+            </div>
+            <div class="review-container button">
+              <button type="button" class="btn btn-primary button" (click)="showReviews(pkg)">Reviews</button>
+              <div class="reviews-popup" *ngIf="pkg.showReviewsPopup">
+                <h3>Reviews for {{pkg.hotelName}}</h3>
+                <ul>
+                  <li *ngFor="let review of pkg.reviews">
+                    {{review.reviewDescription}} - {{review.rating}} stars
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-primary" (click)="hideReviews(pkg)">Close</button>
+              </div>
+            </div>
+            <div class="btn-container button">
+              <button type="button" class="btn btn-primary" (click)="addActivityToItinerary(pkg)">Add to itinerary</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div *ngIf="(searchText.trim() === '' && maxBudget <= 0) && searchedResults.length === 0; else skip">
+      <p class="no-packages">No packages found for "{{ searchText }}" with given budget.</p>
+    </div> -->
+    <ng-template #skip></ng-template>
+    <ng-template #noResults>
+      <p>No activities found for "{{ searchText }}"</p>
+    </ng-template>
+    
+  </div>
+  
+  <app-footer></app-footer>

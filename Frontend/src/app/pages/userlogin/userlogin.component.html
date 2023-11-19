@@ -1,0 +1,38 @@
+<body>
+  <div class="container">
+  <div class="form-container">
+    <h1> User Login</h1>
+    <form [formGroup]="signInForm" (submit)="UserSignIn()">
+      <label for="email-input">Email</label>
+      <input formControlName="email" id="email-input" type="email" name="email" required>
+      <br>
+      <label for="password-input">Password</label>
+      <input formControlName="password" id="password-input" type="password" name="password" required>
+      <br>
+      <div class="btn-container">
+        <button type="submit" class="gradient-button">Sign In</button>
+      </div>
+      <div class="register-link">
+        <p>Don't have an account?<a [routerLink]="'/useregister'" routerLinkActive="active">Register</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+<!-- <div class="wrapper">
+  <form [formGroup]="signInForm" (submit)="UserSignIn()">
+    <h1>Login</h1>
+    <div class="input-box">
+      <input type="email" placeholder="Email" required>
+    </div>
+    <div class="input-box">
+      <input type="password" placeholder="Password" required>
+    </div>
+    <div class="remember-forget">
+      <label><input type="checkbox">Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
+    <button type="submit" class="btn">Login</button>
+    
+  </form>
+</div> -->

@@ -1,0 +1,163 @@
+$bgcolor:#212529;
+
+.carousel-container {
+    position: relative;
+    height: fit-content;
+  }
+  
+  .carousel-container img {
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+  }
+  
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .feature-section {
+    background-color: $bgcolor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  
+  .feature-image {
+    flex: 1;
+    margin-right: 50px;
+    
+    img {
+      height:30vw;
+      width:40vw;
+    }
+    
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .feature-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    
+    @media (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+      h2{
+        font-size: 1.5rem;
+      }
+      p{
+        font-size: 1rem;
+      }
+    }
+  }
+  .gradient-button {
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin:5vw;
+  
+  }
+  .gradient-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 768px) {
+     .gradient-button {
+       font-size: 1rem; 
+       padding: 0.5rem 1rem;
+  }
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    background-color:$bgcolor;
+    color: #fff;
+  }
+  
+  .contact-form .form-header h3 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .contact-form form {
+    margin-top: 20px;
+  }
+  
+  .contact-form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #fff;
+  }
+  
+  .contact-form .form-control {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .contact-form .form-control:focus {
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #353535;
+  }
+  
+  .contact-form .form-control::placeholder {
+    color: #8e8e8e;
+  }
+  
+  .contact-form .input-icon i {
+    color: #8e8e8e;
+  }
+  
+  .contact-form .modify-btn{
+    margin: 0;
+    font-size: 1.5vw;
+    padding: 1vw;
+  }
+  
+  .contact-form .form-footer p {
+    font-size: 0.8rem;
+    color: #8e8e8e;
+  }

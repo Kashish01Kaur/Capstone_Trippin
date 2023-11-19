@@ -1,0 +1,167 @@
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+.navbar {
+  background-color: #212529 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 3px 0 grey;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.navbar .navbar-brand img {
+  height: 10vh;
+}
+.navbar .nav-text {
+  color: white !important;
+}
+.navbar .underline:hover {
+  border-bottom: 2px solid white;
+}
+.navbar .dropdown-menu {
+  background-color: #212529 !important;
+}
+.navbar .sortby {
+  color: white;
+}
+.navbar .filterby {
+  color: white;
+}
+.navbar .dropdown-item {
+  color: white;
+  background-color: #212529;
+}
+.navbar svg {
+  fill: white;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.flex-container .hotel-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-container .hotel-container img {
+  margin-right: 10px;
+}
+.flex-container .button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-container .button-container button {
+  margin-left: 10px;
+}
+
+.container-content {
+  margin-top: 8vw;
+}
+.container-content .accomodation-container .hotel-container {
+  margin-bottom: 10px;
+}
+.container-content .activity-container .hotel-container {
+  margin-bottom: 10px;
+}
+.container-content .hotel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container-content .hotel-container img {
+  width: 30%;
+  height: auto;
+  margin-right: 20px;
+}
+.container-content .hotel-container h4 {
+  width: 60%;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.container-content .hotel-container .button-container {
+  width: 10%;
+  margin-right: 20px;
+}
+.container-content .activity-container .hotel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container-content .activity-container .hotel-container img {
+  width: 30%;
+  height: auto;
+  margin-right: 20px;
+}
+.container-content .activity-container .hotel-container .activity-details {
+  width: 60%;
+  margin-right: 20px;
+}
+.container-content .activity-container .hotel-container .activity-details h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.container-content .activity-container .hotel-container .activity-details p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.container-content .activity-container .hotel-container .button-container {
+  width: 10%;
+  margin-right: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button-container button {
+  margin-left: 10px;
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #343a40;
+}
+
+.book {
+  margin-left: 45vw;
+  margin-bottom: 5vw;
+}/*# sourceMappingURL=itinerary.component.css.map */

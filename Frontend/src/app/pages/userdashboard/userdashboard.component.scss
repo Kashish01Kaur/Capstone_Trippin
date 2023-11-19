@@ -1,0 +1,144 @@
+$bgcolor: #212529;
+$textcolor: white;
+
+.navbar {
+  background-color: $bgcolor !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 3px 0 grey;
+  padding-bottom: 0px;
+  padding-top: 0px;
+
+  .navbar-brand {
+    img {
+      height: 10vh;
+    }
+  }
+
+  .nav-text {
+    color: $textcolor !important;
+  }
+
+  .underline:hover {
+    border-bottom: 2px solid $textcolor;
+  }
+
+  .dropdown-menu {
+    background-color: $bgcolor !important;
+  }
+
+  .sortby {
+    color: $textcolor;
+  }
+
+  .filterby {
+    color: $textcolor;
+  }
+
+  .dropdown-item {
+    color: $textcolor;
+    background-color: $bgcolor;
+  }
+
+  svg {
+    fill: $textcolor;
+    height: 1.5em; 
+    width: 1.5em; 
+  }
+  .search-container{
+    color: $textcolor;
+
+    .maxBudget{
+      width: 5vw;
+    }
+    label{
+      margin-left: 1vw;
+    }
+    input{
+      margin-left: 1vw;
+    }
+    .search-btn{
+      margin-left: 2vw;
+      background-color: $bgcolor;
+
+    }
+  }
+}
+.carousel-container {
+  position: relative;
+  height: fit-content;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: 40vw;
+  object-fit: cover;
+}
+.flex-container {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .image-container {
+    flex: 0 0 30%;
+    margin-right: 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info-container {
+    flex: 1;
+    margin-left: 2vw;
+  }
+  
+  .card-title {
+    margin: 0;
+  }
+  
+  .destination-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+   
+  }
+  
+  .destination-info div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .btn-container {
+    display: flex;
+    align-items: flex-end;
+   gap:1vw;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: 1px solid $bgcolor;
+    border-radius: 4px;
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+  }
+  
+  button:hover {
+    background-color: lighten($bgcolor, 10%);
+  }
+
+  // .key-features{
+  //   background-color: $bgcolor!important;
+  //   height: 20vw;
+  //   margin-top: 10vw;
+  // }
